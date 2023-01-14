@@ -246,9 +246,9 @@ section{
     grid-template-columns: 1fr 2fr;
     grid-gap: 3rem;
     background: url(./img/5.png);
-    background-size: contain;
+    background-size: 60%;
     background-repeat: no-repeat;
-    background-position: 11% 75%;
+    background-position: 2% 75%;
 }
 
 .products .header-text {
@@ -279,8 +279,235 @@ section{
     padding: 10px;
     text-align: left;
     justify-content: left;
+    transition: all .40s ease;
+}
+
+.container-box h3:hover{
+    color: var(--second-color);
 }
 
 .container-box p{
     color: #A9A9A9;
+}
+
+.our-products {
+    position: relative;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.our-products::before {
+    content: "";
+    background-image: url(./img/6.png);
+    background-repeat: repeat;
+    background-size: 900px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+}
+
+.our-products .center-text {
+    text-align: center;
+}
+
+.center-text h3 {
+    position: relative;
+    font-size: 40px;
+    color: var(--main-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.products-here {
+    margin-top: 20px;
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 1.5rem;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-box img {
+    width: 300px;
+    margin-right: -320px;
+    align-items: center;
+}
+
+.product-box :first-child {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 90px;
+    margin-right: -350px;
+    z-index: 1;
+}
+
+.product-box :nth-child(2) {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 60px;
+}
+
+.product-box a{
+    text-align: center;
+    margin-left: 50px;
+    position: relative;
+    width: 300px;
+    height: 60px;
+    overflow: hidden;
+    display: inline-block;
+    color: var(--bg-color);
+    background-image: linear-gradient(#83D0AB, #236622);
+    padding: 10px 40px;
+    font-size: var(--p-font);
+    line-height: 24px;
+    font-weight: 500;
+    transition: all ease .10s;
+    cursor: pointer;
+    border: 1px solid grey;
+}   
+
+.product-box a::before {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: 'View Product';
+    color: black;
+    transition: all .3s;
+    border: none;
+    outline: none;
+}
+
+.product-box a::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    content: 'Detail Product';
+    transition: all .3s;
+    background-image: linear-gradient(#83D0AB, #236622);
+}
+.product-box a:hover::before {
+    top: -60px;
+    border: none;
+    outline: none;
+}
+.product-box a:hover::after{
+    top: 0;
+    border: none;
+    outline: none;
+}
+
+.pro-section {
+    width: 100%;
+    background-image: url(https://demo2.strongtheme.com/vitpro/wp-content/uploads/sites/4/2021/07/viticon010.png);
+    background-size: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.pro-section .center-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pro-section .center-text h3 {
+    position: relative;
+    font-size: 45px;
+    color: var(--main-color);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.pro-section .first-text {
+    text-align: center;
+}
+
+.first-text .small-header {
+    display: flex;
+    flex-direction: right;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.small-header img {
+    width: 40px;
+    margin-right: -20px;
+}
+
+.small-header h3 {
+    font-weight: 400;
+    color: #25AC6C;
+    font-size: 20px;
+}
+
+.first-text p {
+    color: grey;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+.content {
+    display: flex;
+    flex-direction: right;
+    width: 100%;
+}
+
+.content .left-side {
+    text-align: left;
+    align-items: left;
+    justify-content: left;
+}
+
+.content .left-side .first-text {
+    margin-bottom: 130px;
+}
+
+.left-side .first-text .small-header {
+    position: relative;
+    text-align: left;
+    justify-content: left;
+}
+
+.left-side .first-text .small-header img {
+    margin-right: -30px;
+}
+
+.content .imgs {
+    width: 300px;
+}
+
+.imgs img {
+    width: 200px;
 }
